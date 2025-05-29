@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAMAHA BIKE BOOKING</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #0d47a1);
+      color: #fff;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ffcc00;
+    }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      gap: 20px;
+    }
+
+    form {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid #ffcc00;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    .logo-container {
+      flex: 0 0 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container img {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0 5px #000);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .logo-container {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>YAMAHA BIKE BOOKING</h1>
+    <p>Book your dream Yamaha ride now!</p>
+  </header>
+
+  <div class="form-container">
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="model">Select Bike Model</label>
+      <select id="model" name="model" required>
+        <option value="">-- Choose a Model --</option>
+        <option value="R15 V4">R15 V4</option>
+        <option value="MT-15">MT-15</option>
+        <option value="FZ-X">FZ-X</option>
+        <option value="Fascino">Fascino</option>
+      </select>
+
+      <label for="date">Preferred Booking Date</label>
+      <input type="date" id="date" name="date" required />
+      <button type="submit">Book Now</button>
+    </form>
+    <div class="logo-container">
+      
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Yamaha Motor Company. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      alert("Your booking has been submitted! We'll contact you soon.");
+    });
+  </script>
+</body>
+
+</html>
