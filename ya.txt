@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yamaha Service Centre Contact</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #ff4b2b;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .contact-card, .image-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 400px;
+      box-shadow: 0 0 12px black;
+      text-align: left;
+    }
+
+    .contact-card h2 {
+      color: #00eaff;
+    }
+
+    .contact-card p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0d0d0d;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Yamaha Service Centre</h1>
+  </header>
+
+  <div class="container">
+    <div class="contact-card" id="contactInfo">
+      <!-- JS will load content here -->
+    </div>
+    <div class="image-box">
+      <img src="ervive.jpg" alt="Yamaha Service Centre">
+    </div>
+    <div class="image-box">
+      <img src="Capture1.PNG" alt="Location Map">
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Yamaha Motor Service Division
+  </footer>
+
+  <script>
+    const serviceCentre = {
+      name: "Yamaha Authorized Service Centre",
+      address: "123 Moto Street, Speed City, India",
+      phone: "+91-9876543210",
+      email: "service@yamahaindia.com",
+      hours: "Mon - Sat: 9 AM to 6 PM"
+    };
+
+    const contactDiv = document.getElementById('contactInfo');
+
+    contactDiv.innerHTML = `
+      <h2>${serviceCentre.name}</h2>
+      <p><strong>Address:</strong> ${serviceCentre.address}</p>
+      <p><strong>Phone:</strong> ${serviceCentre.phone}</p>
+      <p><strong>Email:</strong> ${serviceCentre.email}</p>
+      <p><strong>Working Hours:</strong> ${serviceCentre.hours}</p>
+    `;
+  </script>
+
+</body>
+</html>

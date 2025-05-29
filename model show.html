@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yamaha Models Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ff416c;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .models-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .model-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 0 15px #000;
+      transition: transform 0.3s;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .model-card:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .model-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .model-info {
+      padding: 1.2rem;
+    }
+
+    .model-info h2 {
+      margin: 0.5rem 0;
+      color: #00eaff;
+      font-size: 1.5rem;
+    }
+
+    .model-info p {
+      font-size: 1rem;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Our Yamaha Models</h1>
+  </header>
+
+  <div class="models-container" id="modelCards">
+    <!-- Cards will be injected here -->
+  </div>
+
+  <script>
+    const models = [
+      {
+        name: "Yamaha R15 V4",
+        desc: "155cc supersport with aggressive styling and advanced electronics.",
+        img: "red.jpg"
+      },
+      {
+        name: "MT-15",
+        desc: "Naked streetfighter with torque-rich performance and a bold stance.",
+        img: "mt-removebg-preview.png"
+      },
+      {
+        name: "FZ-S FI",
+        desc: "Muscular design with comfort and fuel efficiency for city rides.",
+        img: "fz-removebg-preview.png"
+      },
+      {
+        name: "Fascino 125",
+        desc: "Stylish and smart scooter with hybrid power and Bluetooth tech.",
+        img: "fas.jpg"
+      }
+    ];
+
+    const container = document.getElementById('modelCards');
+
+    models.forEach(model => {
+      const card = document.createElement('div');
+      card.className = 'model-card';
+      card.innerHTML = `
+        <img src="${model.img}" alt="${model.name}">
+        <div class="model-info">
+          <h2>${model.name}</h2>
+          <p>${model.desc}</p>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>

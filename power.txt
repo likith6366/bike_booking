@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore the Power of Yamaha</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #000428, #004e92);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: #ff4e50;
+      padding: 1.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 15px;
+      width: 300px;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 0 15px #fff;
+      cursor: pointer;
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: #00c9ff;
+      color: #000;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #92fe9d;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore the Power of Yamaha</h1>
+  </header>
+
+  <main>
+    <h2>Tap a Feature to Learn More</h2>
+    <div class="features">
+      <div class="feature" onclick="showInfo('Engineering')">
+        <h3>Advanced Engineering</h3>
+      </div>
+      <div class="feature" onclick="showInfo('Racing')">
+        <h3>Racing Heritage</h3>
+      </div>
+      <div class="feature" onclick="showInfo('Comfort')">
+        <h3>Everyday Comfort</h3>
+      </div>
+    </div>
+
+    <div id="info" style="margin-top: 1.5rem; font-size: 1.2rem;"></div>
+
+    <button class="btn" onclick="location.href='booking.html'">Book a Test Ride</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Yamaha Motor Company</p>
+  </footer>
+
+  <script>
+    function showInfo(feature) {
+      const infoBox = document.getElementById('info');
+      let message = '';
+
+      switch (feature) {
+        case 'Engineering':
+          message = 'Yamaha bikes are built with top-tier engineering that blends power, efficiency, and durability.';
+          break;
+        case 'Racing':
+          message = 'Inspired by MotoGP, Yamaha bikes deliver race-grade performance on every street.';
+          break;
+        case 'Comfort':
+          message = 'With ergonomic designs and advanced suspension, Yamaha ensures every ride is smooth and enjoyable.';
+          break;
+        default:
+          message = '';
+      }
+
+      infoBox.textContent = message;
+    }
+  </script>
+
+</body>
+</html>
+ 
+    
+  <
